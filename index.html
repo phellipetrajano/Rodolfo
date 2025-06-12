@@ -19,6 +19,7 @@
         /* Estilos para o carrossel (agora no topo) */
         .carrossel {
             max-width: 600px;
+            height: 400px; /* <<< MODIFICAÇÃO 1: Altura fixa para o carrossel */
             margin: 20px auto; /* Espaço abaixo do carrossel */
             overflow: hidden;
             border-radius: 15px;
@@ -28,9 +29,12 @@
         .carrossel-inner {
             display: flex;
             transition: transform 0.5s ease-in-out;
+            height: 100%; /* Garante que o container interno use a altura total */
         }
         .carrossel-inner img {
             width: 100%;
+            height: 100%; /* <<< MODIFICAÇÃO 2: Imagem ocupa toda a altura */
+            object-fit: cover; /* <<< MODIFICAÇÃO 3: Imagem cobre o espaço sem distorcer */
             flex-shrink: 0;
         }
         /* Estilos para o texto e música */
@@ -100,15 +104,15 @@
 
     <div class="carrossel" id="meuCarrossel">
         <div class="carrossel-inner">
-    <img src="fotos/1.jpg" alt="Foto de nós 1">
-    <img src="fotos/2.jpg" alt="Foto de nós 2">
-    <img src="fotos/3.jpg" alt="Foto de nós 3">
-    <img src="fotos/4.jpg" alt="Foto de nós 4">
-    <img src="fotos/5.jpg" alt="Foto de nós 5">
-    <img src="fotos/6.jpg" alt="Foto de nós 6">
-    <img src="fotos/7.jpg" alt="Foto de nós 7">
-    <img src="fotos/8.jpg" alt="Foto de nós 8">
-</div>
+            <img src="fotos/1.jpg" alt="Foto de nós 1">
+            <img src="fotos/2.jpg" alt="Foto de nós 2">
+            <img src="fotos/3.jpg" alt="Foto de nós 3">
+            <img src="fotos/4.jpg" alt="Foto de nós 4">
+            <img src="fotos/5.jpg" alt="Foto de nós 5">
+            <img src="fotos/6.jpg" alt="Foto de nós 6">
+            <img src="fotos/7.jpg" alt="Foto de nós 7">
+            <img src="fotos/8.jpg" alt="Foto de nós 8">
+        </div>
     </div>
 
     <div class="conteudo">
